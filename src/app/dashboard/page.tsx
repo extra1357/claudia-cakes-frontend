@@ -63,20 +63,20 @@ export default function DashboardPage() {
     <div className="space-y-8">
       <div>
         <h2 className="text-2xl font-bold text-gray-800">Dashboard</h2>
-        <p className="text-gray-500 text-sm mt-1">VisÃ£o geral da Claudia Cakes</p>
+        <p className="text-gray-500 text-sm mt-1">VisÃƒÂ£o geral da Claudia Cakes</p>
       </div>
 
       {/* Cards */}
       <div className="grid grid-cols-2 xl:grid-cols-4 gap-4">
         <Card label="Vendas hoje"      value={fmt(summary.vendas.dia)}    icon={TrendingUp}  color="bg-pink-500" />
-        <Card label="Vendas no mÃªs"    value={fmt(summary.vendas.mes)}    icon={TrendingUp}  color="bg-purple-500" />
+        <Card label="Vendas no mÃƒÂªs"    value={fmt(summary.vendas.mes)}    icon={TrendingUp}  color="bg-purple-500" />
         <Card label="Pedidos hoje"     value={String(summary.pedidos.hoje)} icon={ShoppingBag} color="bg-blue-500" />
         <Card label="Pendentes"        value={String(summary.pedidos.pendentes)} icon={Clock} color="bg-orange-400" />
       </div>
 
-      {/* GrÃ¡fico vendas por dia */}
+      {/* GrÃƒÂ¡fico vendas por dia */}
       <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-        <h3 className="text-base font-semibold text-gray-700 mb-4">Vendas â€” Ãºltimos 14 dias</h3>
+        <h3 className="text-base font-semibold text-gray-700 mb-4">Vendas Ã¢â‚¬â€ ÃƒÂºltimos 14 dias</h3>
         <ResponsiveContainer width="100%" height={220}>
           <AreaChart data={vendasDia}>
             <defs>
@@ -95,9 +95,9 @@ export default function DashboardPage() {
       </div>
 
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
-        {/* Vendas por mÃªs */}
+        {/* Vendas por mÃƒÂªs */}
         <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-          <h3 className="text-base font-semibold text-gray-700 mb-4">Vendas â€” Ãºltimos 6 meses</h3>
+          <h3 className="text-base font-semibold text-gray-700 mb-4">Vendas Ã¢â‚¬â€ ÃƒÂºltimos 6 meses</h3>
           <ResponsiveContainer width="100%" height={200}>
             <BarChart data={vendasMes}>
               <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
